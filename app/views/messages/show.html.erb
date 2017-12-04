@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @message.author %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @message.content %>
+</p>
+
+<p>
+  <strong>Message thread id:</strong>
+  <%= @message.message_thread.id %>
+</p>
+
+<p>
+  <strong>Message thread of User:</strong>
+  <%= @message.message_thread.user.name %></td>
+</p>
+
+<p>
+  <strong>Read:</strong>
+  <%= @message.read %>
+</p>
+
+<%= link_to 'Edit', edit_message_thread_message_path(@message) %>

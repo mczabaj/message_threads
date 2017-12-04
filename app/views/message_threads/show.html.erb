@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Thread for User:</strong>
+  <%= @message_thread.user.name %>
+</p>
+<p>
+  <strong>Unread Messages:</strong>
+  <%= @message_thread.unread %>
+</p>
+<br/>
+<%= link_to 'Mark All Read', @message_thread, method: :patch %></td>
+<%= link_to 'Show Messages', message_thread_messages_path(message_thread_id: @message_thread.id) %>
+<br/>
+<%= link_to 'Back', message_threads_path %>
